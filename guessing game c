@@ -1,0 +1,24 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+#include<math.h> 
+
+int main(){
+    int a,b = 0,c;
+    srand(time(0));
+    c = rand()%100 + 1;
+    printf("%d\n",c);
+    do {
+    printf("Enter number\n");
+    scanf("%d",&a);
+    if (a>c)
+    printf("Enter a smaller number \n\n");
+    else if (c>a)
+    printf("Enter a larger number \n\n");
+    b++;
+    } while (a != c);
+    
+    printf("The number is %d and you took %d tries ",c,b);
+    
+    return 0;
+}
